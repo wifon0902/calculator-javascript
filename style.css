@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+    --dark-font: #ffffffec;
+    --dark-primary: #22252d;
+    --dark-secondary: #2a2d37;
+
+    --light-font: #22252d;
+    --light-primary: #f2f2f2;
+    --light-secondary: #fcfcfc;
+
+    --accent: #00A98A;
+    --contrast: #905BAF;
+}
+
+html {
+    font-family: 'Open Sans', sans-serif;
+}
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    height: 73vh;
+    min-width: 340px;
+    max-width: 340px;
+    border-radius: 20px;
+}
+
+.display {
+    width: 100%;
+    min-height: 38%;
+    max-height: min-content;
+    word-break: break-all;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 25px 15px 25px;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+}
+
+.currentNumber {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.previousNumber {
+    font-size: 20px;
+}
+
+.mathSign {
+    color: var(--accent);
+    font-weight: bold;;
+}
+
+.panel {
+    height: 62%;
+    padding: 22px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 13px;
+    border-radius: 20px
+}
+
+.panel button {
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.zero {
+    grid-column: -5/-3;
+}
+
+.operator  { 
+    color: var(--accent) !important;
+    font-size: 30px !important;
+}
+
+.special {
+    color: var(--accent) !important;
+    font-weight: bold;
+}
+
+.equals {
+    background-color: var(--accent) !important;
+}
+
+.equals:hover{
+    background-color: #008f75 !important;
+}
+
+.clear {
+    color: var(--accent) !important;
+    font-weight: bold;
+    font-size: 19px !important;
+}
+
+.theme {
+    display: flex;
+    justify-content: center;
+}
+
+.toggle {
+    cursor: pointer;
+    position: absolute;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.toggle i {
+    width: 60%;
+    text-align: center;
+    font-size: 24px;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+
+
+
+/* Zmiana motywu */
+
+
+
+
+.light {
+    background: -webkit-linear-gradient(200deg, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+    background: linear-gradient(200deg, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+
+}
+
+.light .calculator {
+    background-color: var(--light-primary);
+}
+
+.light .display {
+    background-color: var(--light-primary);
+    color: var(--light-font);
+}
+
+.light .panel {
+    background-color: var(--light-secondary);
+}
+
+.light .panel button {
+    background-color: var(--light-primary);
+    color: var(--light-font);
+}
+
+.light .panel button:hover {
+    background-color: #e0e0e0;
+}
+
+.light .toggle {
+    background: var(--light-secondary);
+}
+
+.light .toggle .bxs-sun {
+    color: #686868;
+}
+
+.light .toggle .bx-moon {
+    color: #dddddd;
+}
+
+
+
+
+.dark {
+    background: -webkit-linear-gradient(200deg, #2C5364, #203A43, #0F2027);
+    background: linear-gradient(200deg, #2C5364, #203A43, #0F2027);
+
+}
+
+.dark .calculator {
+    background-color: var(--dark-primary);
+}
+
+.dark .display {
+    background-color: var(--dark-primary);
+    color: var(--dark-font);
+}
+
+.dark .panel {
+    background-color: var(--dark-secondary);
+}
+
+.dark .panel button {
+    background-color: var(--dark-primary);
+    color: var(--dark-font);
+}
+
+.dark .panel button:hover {
+    background-color: #1b1d24;
+}
+
+.dark .toggle {
+    background: var(--dark-secondary);
+}
+
+.dark .toggle .bx-sun {
+    color: #686868;
+}
+
+.dark .toggle .bxs-moon {
+    color: #dddddd;
+}
